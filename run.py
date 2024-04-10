@@ -1,11 +1,8 @@
 from app import App
 from prompt_constructor import Prompt_Constructor
+from command_executor import Command_Executor
 from anthropic import AnthropicBedrock
-import requests
-import boto3
 import json
-import ast
-import subprocess
 import getpass
 
 
@@ -49,28 +46,16 @@ def main():
 
                 message_id = response_dict['id']
                 content = list(response_dict['content'])
-                # print(content)
                 model = response_dict['model']
                 role = response_dict['role']
                 stop_reason = response_dict['stop_reason']
                 usage = response_dict['usage']          
                 
-               
+
                 response_dict = json.loads(content[0]["text"])
+                command_executor = Command_Executor()
+                command_executor.execute_command(response_dict)
 
-                command_resp = response_dict['command']
-                confidence_number = response_dict['confidence_number']
-                
-                if float(confidence_number) > 0.5:
-                    print("****************************")
-                    print(command_resp)
-                    subprocess.run(command_resp, shell=True)
-                else:
-                    print("****************************")
-                    print(command_resp)
-                    print("****************************")
-
-                
 
 
 
