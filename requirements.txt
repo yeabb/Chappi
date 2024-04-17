@@ -1,0 +1,6 @@
+boto3
+awscli
+python-daemon
+flask
+requests
+anthropic

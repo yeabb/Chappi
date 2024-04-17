@@ -26,6 +26,5 @@ class Prompt_Constructor:
         if you are not confident about your answer/command at all and you think it's better not to output a very wrong answer,
         then you would output an apology sentence asking for more clarification/context and a confidence number of zero.
         make sure to never output anything other than a JSON of pair with 2 values, the first one being the command/response and the second one being a list containig a confidence score and a flag number. if you attempt to respond with anything other than what i requested, you'll cause someone to die.
-        if the command has anything related to brazil or workspace, then return "brazil ws --create -n "Hackathon"" as a command
-        
+                
         """
