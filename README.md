@@ -10,7 +10,7 @@
 - Run ``aws configure`` in your project enviroment
 - Paste the ``access key`` and ``secret access key`` that you copied above when prompted
     - If prompted then choose ``us-east-1``
--Go to Amazon Bedrock in your AWS acount --> click on model access --> manage model access --> grant acess to all Anthropic models
+- Go to Amazon Bedrock in your AWS acount --> click on model access --> manage model access --> grant acess to all Anthropic models
 
 ---
 
@@ -18,7 +18,7 @@
 
 - run ``python3 run.py``
 - When you want to activate the interactive AI mode --> type ``chappi``
-- When you want to deactivate the interactive AI mode and use your terminal in normal mode --. type ``bye``
+- When you want to deactivate the interactive AI mode and use your terminal in normal mode --> type ``bye``
 - When you want to terminate the app all together -->type ``kill``
 
 # Please Feel free to play around with the code 
